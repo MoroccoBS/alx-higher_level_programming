@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -c "compile(open(\"$PYFILE\").read(), 'exec', filename=\"$PYFILEc\")"
+python3 -m compileall -b "$PYFILE"
