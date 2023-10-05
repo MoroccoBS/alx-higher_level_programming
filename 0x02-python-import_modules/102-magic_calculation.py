@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def magic_calculation(a, b):
-    from magic_calculation_102 import (
+    from calculator_1 import (
         add,
         sub,
     )
@@ -14,3 +14,8 @@ def magic_calculation(a, b):
         for i in range(4):
             c = sub(c, i)
     return callable
+
+
+import dis
+
+dis.dis(magic_calculation)
