@@ -1,32 +1,21 @@
 #!/usr/bin/python3
-def roman_to_int(roman_string: str):
-    mapping = {
-        "M": 1000,
-        "CM": 900,
-        "D": 500,
-        "CD": 400,
-        "C": 100,
-        "XC": 90,
-        "L": 50,
-        "XL": 40,
-        "X": 10,
-        "IX": 9,
-        "V": 5,
-        "IV": 4,
-        "I": 1,
-    }
-    if not roman_string:
+def roman_to_int(roman_string):
+    if not isinstance(roman_string, str) or roman_string is None:
         return 0
-    if not isinstance(roman_string):
-        return 0
-    integer = 0
-    for i in range(len(roman_string)):
-        if (
-            i < len(roman_string) - 1
-            and mapping[roman_string[i]] < mapping[roman_string[i + 1]]
-        ):
-            integer -= mapping[roman_string[i]]
-        else:
-            integer += mapping[roman_string[i]]
 
-    return integer
+    mapping = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+
+    total = 0
+    prev_value = 0
+
+    for symbol in reversed(roman_string):
+        value = mapping.get(symbol, 0)
+
+        if value >= prev_value:
+            total += value
+        else:
+            total -= value
+
+        prev_value = value
+
+    return total
