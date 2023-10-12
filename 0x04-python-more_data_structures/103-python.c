@@ -1,8 +1,8 @@
-#include <python.h>
+#include "python.h"
 
 /**
  * print_python_list - prints a Python list
- * p: a Python list object
+ * @p: a Python list object
  * Return: None
  */
 
@@ -30,7 +30,7 @@ void print_python_list(PyObject *p)
 
 /**
  * print_python_bytes - prints a Python bytes object
- * p: a Python bytes object
+ * @p: a Python bytes object
  * Return: None
  */
 
