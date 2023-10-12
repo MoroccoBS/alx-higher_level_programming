@@ -15,6 +15,10 @@ def roman_to_int(roman_string: str):
         "IV": 4,
         "I": 1,
     }
+    if not roman_string:
+        return 0
+    if not isinstance(roman_string):
+        return 0
     integer = 0
     for i in range(len(roman_string)):
         if (
