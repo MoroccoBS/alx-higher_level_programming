@@ -1,0 +1,40 @@
+The ```add_integer``` function adds two integers together.
+=========================================================
+
+Using ``add_integer``
+--------------------
+
+Import function from Module:
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+Test function with valid inputs:
+	>>> add_integer(2, 2)
+	4
+
+Test function with negative input:
+	>>> add_integer(5, -3)
+	2
+
+Test function with float input:
+	>>> add_integer(2.5, 3)
+	5
+
+Test function with float inputs:
+	>>> add_integer(2.5, 3.5)
+	5
+
+Test function with string inputs:
+	>>> add_integer(2.5, "3")
+	Traceback (most recent call last):
+    	...
+	TypeError: b must be an integer
+
+Test function with string inputs:
+	>>> add_integer("2", 3)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+Test function with one input:
+	>>> add_integer(2)
+	100
