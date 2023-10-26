@@ -2,6 +2,11 @@
 
 
 class Square:
-    """A class that defines a square"""
+    """
+    A class that defines a square
+
+    Returns:
+                None
+    """
 
     pass
