@@ -51,6 +51,6 @@ class Rectangle:
             return ""
         return "\n".join(["#" * self.width] * self.height)
 
-    def __repr__(self):
-        """Return the string representation of the rectangle"""
-        return f"<{self.__class__.__name__} object at {hex(id(self))}>"
+    # def __repr__(self):
+    #     """Return the string representation of the rectangle"""
+    #     return f"<{self.__class__.__name__} object at {hex(id(self))}>"
