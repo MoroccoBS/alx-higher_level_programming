@@ -1,0 +1,24 @@
+The ```say_my_name``` function prints My name is <first name> <last name>.
+=========================================================
+
+Using ``say_my_name``
+--------------------
+
+Import function from Module:
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Test function with valid inputs:
+	>>> say_my_name("John", "Doe")
+	My name is John Doe
+
+Test function int input and float input:
+	>>> say_my_name(2, 2.5)
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+Test function missing inputs:
+	>>> say_my_name()
+	Traceback (most recent call last):
+		...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'

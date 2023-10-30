@@ -1,0 +1,33 @@
+The ```print_square``` function prints My name is <first name> <last name>.
+=========================================================
+
+Using ``print_square``
+--------------------
+
+Import function from Module:
+	>>> print_square = __import__("4-print_square").print_square
+
+Test function with valid inputs:
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
+Test function with negative input:
+	>>> print_square(-4)
+	Traceback (most recent call last):
+		...
+	ValueError: size must be >= 0
+
+Test function with float input:
+	>>> print_square(4.5)
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+Test function with string input:
+	>>> print_square("4")
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
