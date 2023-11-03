@@ -1,0 +1,31 @@
+The ```lazy_matrix_mul``` function multiplies two matrices.
+=========================================================
+
+Using ``lazy_matrix_mul``
+--------------------
+
+Import function from Module:
+	>>> lazy_matrix_mul = __import__("101-lazy_matrix_mul").lazy_matrix_mul
+
+Test function with valid inputs:
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+	[[19 22]
+ 		[43 50]]
+
+Test function with invalid inputs:
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8], [9, 10]])
+	Traceback (most recent call last):
+		...
+	ValueError: matrices must be of equal dimensions
+
+Test function with float inputs:
+	>>> lazy_matrix_mul([[1.5, 2.5], [3.5, 4.5]], [[5.5, 6.5], [7.5, 8.5]])
+	Traceback (most recent call last):
+		...
+	TypeError: matrix must be a matrix (list of lists) of integers
+
+Test function with non matrix inputs:
+	>>> lazy_matrix_mul(1, 2)
+	Traceback (most recent call last):
+		...
+	TypeError: matrix must be a matrix (list of lists) of integers
