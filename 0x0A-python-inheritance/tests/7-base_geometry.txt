@@ -7,15 +7,15 @@ Traceback (most recent call last):
 	...
 Exception: area() is not implemented
 
->>> bg.integer_validator("Silvia", 20)
+>>> bg.integer_validator("Soumia", 19)
 
 
-Check when value is not an int
+Test class when value is not an int
 
->>> bg.integer_validator("Silvia", "hi")
+>>> bg.integer_validator("Soumia", "hi")
 Traceback (most recent call last):
 	...
-TypeError: Silvia must be an integer
+TypeError: Soumia must be an integer
 
 >>> bg.integer_validator("", True)
 Traceback (most recent call last):
@@ -27,11 +27,11 @@ Traceback (most recent call last):
 	...
 TypeError: str must be an integer
 
-Check when value is less than or equal to zero
->>> bg.integer_validator("Silvia", -9)
+Test class when value is less than or equal to zero
+>>> bg.integer_validator("Soumia", -9)
 Traceback (most recent call last):
 	...
-ValueError: Silvia must be greater than 0
+ValueError: Soumia must be greater than 0
 
 >>> bg.integer_validator("int", 0)
 Traceback (most recent call last):
@@ -53,21 +53,21 @@ Traceback (most recent call last):
 	...
 TypeError: int must be an integer
 
-Check when value is too large (inf)
->>> bg.integer_validator("Silvia", float("inf"))
+Test class when value is too large (inf)
+>>> bg.integer_validator("Soumia", float("inf"))
 Traceback (most recent call last):
 	...
-TypeError: Silvia must be an integer
+TypeError: Soumia must be an integer
 
 
-Check when no argument is passed
+Test class when no argument is passed
 >>> bg.integer_validator()
 Traceback (most recent call last):
 	...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
-Check when one argument is passed
->>> bg.integer_validator("Silvia")
+Test class when one argument is passed
+>>> bg.integer_validator("Soumia")
 Traceback (most recent call last):
 	...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
