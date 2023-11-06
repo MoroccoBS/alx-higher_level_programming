@@ -45,3 +45,33 @@ Test class with given test case
 		except Exception as e:
     		print("[{}] {}".format(e.__class__.__name__, e))
 	[ValueError] distance must be greater than 0
+
+
+Test case for the area method
+	>>> bg = BaseGeometry()
+	>>> bg.area()
+	0
+
+Test case for the integer_validator method with a valid input
+	>>> bg.integer_validator("height", 10)
+
+Test case for the integer_validator method with a non-integer input
+	>>> try:
+	...     bg.integer_validator("age", "twenty")
+	... except Exception as e:
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	[TypeError] age must be an integer
+
+Test case for the integer_validator method with a negative input
+	>>> try:
+	...     bg.integer_validator("width", -5)
+	... except Exception as e:
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	[ValueError] width must be greater than 0
+
+Test case for the integer_validator method with a zero input
+	>>> try:
+	...     bg.integer_validator("length", 0)
+	... except Exception as e:
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	[ValueError] length must be greater than 0
