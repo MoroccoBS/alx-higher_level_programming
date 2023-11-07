@@ -13,3 +13,7 @@ def add_item_json_file():
             json.dump(args, f)
         else:
             json.dump([], f)
+
+
+if __name__ == "__main__":
+    add_item_json_file()
