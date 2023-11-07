@@ -44,7 +44,7 @@ for line in sys.stdin:
         lines += 1
         if lines % 10 == 0:
             print_metrics()
-    except:
+    except Exception:
         pass
 
 
